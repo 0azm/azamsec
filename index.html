@@ -155,6 +155,15 @@
   .gallery img:hover{transform:scale(1.03)}
   .gallery-cap{margin:.65rem 0 0; font-size:.83rem; color:var(--muted); font-style:italic}
   @media (max-width:560px){ .gallery{grid-template-columns:1fr 1fr} }
+  .svc-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:clamp(16px,2.4vw,22px)}
+  @media (max-width:720px){ .svc-grid{grid-template-columns:1fr} }
+  .svc{background:var(--surface); border:1px solid var(--line); border-radius:18px; padding:1.5rem; box-shadow:var(--shadow); transition:transform .2s ease, box-shadow .2s ease}
+  .svc:hover{transform:translateY(-3px); box-shadow:var(--shadow-lift)}
+  .svc .ic{width:44px; height:44px; border-radius:12px; display:grid; place-items:center; background:color-mix(in srgb,var(--accent) 12%, var(--surface)); color:var(--accent-ink); margin-bottom:.85rem}
+  .svc .ic svg{width:23px; height:23px}
+  .svc h3{font-size:1.18rem}
+  .svc p{margin:.5rem 0 0; font-size:.97rem; color:var(--ink)}
+  .svc-note{margin:1.4rem 0 0; font-size:.9rem; color:var(--muted)}
 
   .proj-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:clamp(16px,2.4vw,22px)}
   @media (max-width:720px){ .proj-grid{grid-template-columns:1fr} }
@@ -381,6 +390,44 @@
 <section class="band reveal">
   <div class="wrap">
     <div class="sec-head">
+      <span class="eyebrow">Services</span>
+      <h2>How I can help</h2>
+      <p>Available for freelance and consulting work across offensive and defensive security. Every engagement ends with a clear, prioritized report you can act on.</p>
+    </div>
+    <div class="svc-grid">
+
+      <article class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.5 8 11 4.6-2.5 8-6 8-11V5l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></div>
+        <h3>Penetration Testing &amp; Vulnerability Assessment</h3>
+        <p>Hands-on security testing of networks, web applications, and Active Directory to surface exploitable weaknesses before an attacker does, delivered as a prioritized list of what to fix first.</p>
+      </article>
+
+      <article class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
+        <h3>Digital Forensics &amp; Incident Response</h3>
+        <p>Investigating security incidents and analyzing host and network evidence to reconstruct how a compromise happened, turning raw artifacts into a clear timeline and recommendations.</p>
+      </article>
+
+      <article class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></div>
+        <h3>Security Awareness &amp; Phishing Simulation</h3>
+        <p>Privacy-first phishing, smishing, and QR-code awareness campaigns that train your team the moment they click, with ethical, non-identifying reporting on your risk posture.</p>
+      </article>
+
+      <article class="svc">
+        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M16 5h2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></div>
+        <h3>Security Consulting &amp; NCA-ECC Readiness</h3>
+        <p>Practical guidance on hardening systems and aligning with the National Cybersecurity Authority's Essential Cybersecurity Controls (ECC), mapped to real, actionable steps.</p>
+      </article>
+
+    </div>
+    <p class="svc-note">Engagements are scoped and authorized in writing before any testing begins.</p>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="wrap">
+    <div class="sec-head">
       <span class="eyebrow">Certifications</span>
       <h2>Credentials I've earned</h2>
     </div>
@@ -415,7 +462,7 @@
   </div>
 </section>
 
-<section class="reveal">
+<section class="band reveal">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">Skills &amp; tools</span>
@@ -463,7 +510,7 @@
   </div>
 </section>
 
-<section class="band reveal">
+<section class="reveal">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">Beyond the keyboard</span>
