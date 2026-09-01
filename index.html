@@ -155,15 +155,6 @@
   .gallery img:hover{transform:scale(1.03)}
   .gallery-cap{margin:.65rem 0 0; font-size:.83rem; color:var(--muted); font-style:italic}
   @media (max-width:560px){ .gallery{grid-template-columns:1fr 1fr} }
-  .svc-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:clamp(16px,2.4vw,22px)}
-  @media (max-width:720px){ .svc-grid{grid-template-columns:1fr} }
-  .svc{background:var(--surface); border:1px solid var(--line); border-radius:18px; padding:1.5rem; box-shadow:var(--shadow); transition:transform .2s ease, box-shadow .2s ease}
-  .svc:hover{transform:translateY(-3px); box-shadow:var(--shadow-lift)}
-  .svc .ic{width:44px; height:44px; border-radius:12px; display:grid; place-items:center; background:color-mix(in srgb,var(--accent) 12%, var(--surface)); color:var(--accent-ink); margin-bottom:.85rem}
-  .svc .ic svg{width:23px; height:23px}
-  .svc h3{font-size:1.18rem}
-  .svc p{margin:.5rem 0 0; font-size:.97rem; color:var(--ink)}
-  .svc-note{margin:1.4rem 0 0; font-size:.9rem; color:var(--muted)}
 
   .proj-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:clamp(16px,2.4vw,22px)}
   @media (max-width:720px){ .proj-grid{grid-template-columns:1fr} }
@@ -252,7 +243,7 @@
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.29-1.7-1.29-1.7-1.06-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.04 1.78 2.73 1.27 3.4.97.1-.75.4-1.27.73-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.2-3.1-.13-.29-.52-1.46.1-3.04 0 0 .97-.31 3.2 1.18a11 11 0 0 1 5.82 0c2.22-1.5 3.19-1.18 3.19-1.18.63 1.58.23 2.75.11 3.04.75.81 1.2 1.84 1.2 3.1 0 4.43-2.71 5.4-5.29 5.69.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/></svg>
           GitHub
         </a>
-        <a class="btn btn-ghost" href="mailto:me@azamsec.sa">
+        <a class="btn btn-ghost" href="mailto:me@azamsec.com">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
           Email
         </a>
@@ -390,44 +381,6 @@
 <section class="band reveal">
   <div class="wrap">
     <div class="sec-head">
-      <span class="eyebrow">Services</span>
-      <h2>How I can help</h2>
-      <p>Available for freelance and consulting work across offensive and defensive security. Every engagement ends with a clear, prioritized report you can act on.</p>
-    </div>
-    <div class="svc-grid">
-
-      <article class="svc">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 5v6c0 5 3.4 8.5 8 11 4.6-2.5 8-6 8-11V5l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg></div>
-        <h3>Penetration Testing &amp; Vulnerability Assessment</h3>
-        <p>Hands-on security testing of networks, web applications, and Active Directory to surface exploitable weaknesses before an attacker does, delivered as a prioritized list of what to fix first.</p>
-      </article>
-
-      <article class="svc">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></div>
-        <h3>Digital Forensics &amp; Incident Response</h3>
-        <p>Investigating security incidents and analyzing host and network evidence to reconstruct how a compromise happened, turning raw artifacts into a clear timeline and recommendations.</p>
-      </article>
-
-      <article class="svc">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg></div>
-        <h3>Security Awareness &amp; Phishing Simulation</h3>
-        <p>Privacy-first phishing, smishing, and QR-code awareness campaigns that train your team the moment they click, with ethical, non-identifying reporting on your risk posture.</p>
-      </article>
-
-      <article class="svc">
-        <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M16 5h2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2"/><path d="m9 14 2 2 4-4"/></svg></div>
-        <h3>Security Consulting &amp; NCA-ECC Readiness</h3>
-        <p>Practical guidance on hardening systems and aligning with the National Cybersecurity Authority's Essential Cybersecurity Controls (ECC), mapped to real, actionable steps.</p>
-      </article>
-
-    </div>
-    <p class="svc-note">Engagements are scoped and authorized in writing before any testing begins.</p>
-  </div>
-</section>
-
-<section class="reveal">
-  <div class="wrap">
-    <div class="sec-head">
       <span class="eyebrow">Certifications</span>
       <h2>Credentials I've earned</h2>
     </div>
@@ -462,7 +415,7 @@
   </div>
 </section>
 
-<section class="band reveal">
+<section class="reveal">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">Skills &amp; tools</span>
@@ -510,7 +463,7 @@
   </div>
 </section>
 
-<section class="reveal">
+<section class="band reveal">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">Beyond the keyboard</span>
@@ -560,9 +513,9 @@
     <h2 style="margin-top:.7rem">Let's build something secure together</h2>
     <p>I'm open to internships, research, and roles across offensive and defensive security. The best ways to reach me are email or LinkedIn.</p>
     <div class="contact-row">
-      <a class="btn btn-primary" href="mailto:me@azamsec.sa">
+      <a class="btn btn-primary" href="mailto:me@azamsec.com">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></svg>
-        me@azamsec.sa
+        me@azamsec.com
       </a>
       <a class="btn btn-ghost" href="https://www.linkedin.com/in/azam-a-alburiki/" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M4.98 3.5A2.5 2.5 0 1 1 0 3.5a2.5 2.5 0 0 1 4.98 0ZM.4 8.06h4.15V24H.4V8.06Zm7.05 0h3.98v2.18h.06c.55-1.05 1.9-2.16 3.9-2.16 4.18 0 4.95 2.75 4.95 6.32V24h-4.14v-7.02c0-1.67-.03-3.82-2.33-3.82-2.33 0-2.68 1.82-2.68 3.7V24H7.45V8.06Z"/></svg>
