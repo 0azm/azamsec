@@ -79,7 +79,12 @@
   }
   .toggle:hover{transform:rotate(-12deg) scale(1.06)}
   .toggle:focus-visible{outline:2px solid var(--accent); outline-offset:3px}
-  @media (max-width:640px){ .navlinks a{display:none} }
+  @media (max-width:640px){
+    .navbrand{display:none}
+    .navwrap{justify-content:center}
+    .navlinks{width:100%; justify-content:space-between; gap:.4rem}
+    .navlinks a{font-size:.78rem}
+  }
 
   header.hero{position:relative; overflow:hidden; padding:clamp(72px,12vw,120px) 0 clamp(48px,7vw,80px)}
   header.hero::before{
@@ -236,6 +241,7 @@
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
       <button class="toggle" id="themeToggle" aria-label="Switch light or dark theme" title="Switch theme">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 1 0 18Z" fill="currentColor" stroke="none"/></svg>
@@ -297,10 +303,10 @@
       <span class="eyebrow">About me</span>
       <h2>A little about who I am</h2>
     </div>
-    <p>My path into security started with pure curiosity. As a kid I was fascinated by how much of the world sits quietly exposed on the internet, and just as early, I learned to step back from what wasn't mine to open. That instinct, curiosity paired with knowing where the line is, is still how I work.</p>
     <p>I'm a cybersecurity and digital forensics student at <b>Imam Abdulrahman bin Faisal University</b>. I came in through computer science, and after a year weighing it against the rise of AI, I chose security. My focus is offensive security: understanding exactly how attackers compromise systems, so I can help defend them.</p>
+    <p>My path here started with pure curiosity. As a kid I was fascinated by how much of the world sits quietly exposed on the internet, and just as early, I learned to step back from what wasn't mine to open. That instinct, curiosity paired with knowing where the line is, is still how I work.</p>
     <p>Over the past three years I've earned three professional certifications, built security tooling that runs on a supercomputer, spoken at a bootcamp, and designed capture-the-flag challenges for my university. I work across both sides of the field: <span class="mark">penetration testing</span> to expose real risk, and <span class="mark">digital forensics and detection</span> to investigate and contain it.</p>
-    <p>Most recently I completed the <b>KAUST x NCA Cybersecurity Specialisation</b> with the University of Glasgow and King Khalid University, working on AI security, IoT and industrial systems, and hands-on blue-team defence. When something looks impossible or unfamiliar, my instinct is the same: open it up, work it out myself, get it wrong the first time like anyone would, and keep going until it works, <i>inshallah</i>.</p>
+    <p>Most recently I completed the <b>KAUST x NCA Cybersecurity Specialisation</b> with the University of Glasgow and King Khalid University, working on AI security, IoT and industrial systems, and hands-on blue-team defence. When something looks impossible or unfamiliar, my instinct is the same: open it up, work it out myself, get it wrong the first time like anyone would, and keep going until it works, <i>Inshallah</i>.</p>
   </div>
 </section>
 
@@ -446,7 +452,7 @@
   </div>
 </section>
 
-<section class="reveal">
+<section class="reveal" id="skills">
   <div class="wrap">
     <div class="sec-head">
       <span class="eyebrow">Skills &amp; tools</span>
