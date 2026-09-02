@@ -121,6 +121,15 @@
   .btn-ghost{background:var(--surface); color:var(--ink); border-color:var(--line); box-shadow:var(--shadow)}
   .btn svg{width:18px; height:18px}
 
+  .scrollcue{position:absolute; left:50%; bottom:20px; transform:translateX(-50%); z-index:2; display:inline-flex; flex-direction:column; align-items:center; gap:.35rem; color:var(--muted); text-decoration:none; font-size:.7rem; font-weight:600; letter-spacing:.18em; text-transform:uppercase; opacity:.68; transition:opacity .4s ease, transform .4s ease}
+  .scrollcue:hover{opacity:1; color:var(--forest-ink)}
+  .scrollcue:focus-visible{outline:2px solid var(--accent); outline-offset:4px; border-radius:6px}
+  .scrollcue svg{width:22px; height:22px; animation:cuebob 2.2s ease-in-out infinite}
+  .scrollcue.gone{opacity:0; pointer-events:none; transform:translateX(-50%) translateY(10px)}
+  @keyframes cuebob{0%,100%{transform:translateY(0)}50%{transform:translateY(6px)}}
+  @media (prefers-reduced-motion:reduce){ .scrollcue svg{animation:none} }
+  @media (max-width:640px){ .scrollcue{display:none} }
+
   section{padding:clamp(46px,7vw,78px) 0}
   section.band{background:var(--surface-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line)}
   .sec-head{margin-bottom:2rem}
@@ -224,7 +233,7 @@
     <div>
       <p class="hello">Hi there, I'm</p>
       <h1>Azam&nbsp;Alburiki</h1>
-      <p class="role">A <b>cybersecurity &amp; digital forensics</b> student who loves the puzzle of <span class="mark">keeping systems safe</span>, and making that work easy to understand.</p>
+      <p class="role"><b>Cybersecurity &amp; digital forensics</b> student and certified penetration tester. I find the <span class="mark">vulnerabilities attackers exploit</span>, then turn them into clear, prioritized fixes.</p>
       <div class="hero-meta">
         <span class="pill"><span class="dot"></span>eCPPTv3</span>
         <span class="pill"><span class="dot"></span>eJPTv2</span>
@@ -250,9 +259,13 @@
       </div>
     </div>
   </div>
+  <a class="scrollcue" href="#highlights" aria-label="Scroll to see more">
+    <span>Scroll</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v13M6 12l6 6 6-6"/></svg>
+  </a>
 </header>
 
-<section class="band reveal" style="padding-top:clamp(34px,5vw,48px); padding-bottom:clamp(34px,5vw,48px)">
+<section id="highlights" class="band reveal" style="padding-top:clamp(34px,5vw,48px); padding-bottom:clamp(34px,5vw,48px)">
   <div class="wrap facts">
     <div class="fact"><div class="n">3</div><div class="l">Professional certifications</div></div>
     <div class="fact"><div class="n">1</div><div class="l">KAUST x NCA Cybersecurity Alumni</div></div>
@@ -267,9 +280,9 @@
       <span class="eyebrow">About me</span>
       <h2>A little about who I am</h2>
     </div>
-    <p>I'm a cybersecurity and digital forensics student at <b>Imam Abdulrahman bin Faisal University</b>, and I genuinely enjoy the challenge of finding weaknesses in systems, then fixing them.</p>
-    <p>Over the past three years I've earned three professional certifications, built security tools that run on a supercomputer, spoken at a bootcamp, and helped design capture-the-flag competitions for my university. I move comfortably between the <span class="mark">offensive side</span> (spotting the gaps) and the <span class="mark">defensive side</span> (closing them).</p>
-    <p>Most recently I completed the <b>KAUST x NCA Cybersecurity Specialisation</b> with the University of Glasgow and King Khalid University, where I explored AI security, IoT and industrial systems, and hands-on blue-team defence. I'm always learning what comes next, and my goal is to become someone who can build, test, and keep real systems safe.</p>
+    <p>I'm a cybersecurity and digital forensics student at <b>Imam Abdulrahman bin Faisal University</b>, and my focus is offensive security: understanding exactly how attackers compromise systems, so I can help defend them.</p>
+    <p>Over the past three years I've earned three professional certifications, built security tooling that runs on a supercomputer, spoken at a bootcamp, and designed capture-the-flag challenges for my university. I work across both sides of the field: <span class="mark">penetration testing</span> to expose real risk, and <span class="mark">digital forensics and detection</span> to investigate and contain it.</p>
+    <p>Most recently I completed the <b>KAUST x NCA Cybersecurity Specialisation</b> with the University of Glasgow and King Khalid University, working on AI security, IoT and industrial systems, and hands-on blue-team defence. I'm always tracking what comes next, and my goal is to build, break, and defend systems to a professional standard.</p>
   </div>
 </section>
 
@@ -551,5 +564,13 @@
       entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); } });
     }, {threshold:.12});
     els.forEach(function(e){ io.observe(e); });
+  })();
+
+  (function(){
+    var cue = document.querySelector('.scrollcue');
+    if(!cue) return;
+    window.addEventListener('scroll', function(){
+      if(window.scrollY > 120) cue.classList.add('gone');
+    }, {passive:true});
   })();
 </script>
